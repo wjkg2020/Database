@@ -62,7 +62,7 @@ private:
 
   void CopyFirstFrom(const MappingType &pair, BufferPoolManager *buffer_pool_manager);
 
-  MappingType array_[0];
+  MappingType array_[];
 };
 
 #endif  // MINISQL_B_PLUS_TREE_INTERNAL_PAGE_H

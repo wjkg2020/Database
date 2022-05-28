@@ -80,6 +80,7 @@ private:
 
   template<typename N>
   N *Split(N *node);
+  N* FindbrotherPage(N *node,Transaction *transaction);
 
   template<typename N>
   bool CoalesceOrRedistribute(N *node, Transaction *transaction = nullptr);
