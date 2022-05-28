@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "..\\.."
+		},
+		{
+			"name": "Database",
+			"path": "..\\..\\..\\..\\..\\Databasegit\\Database"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"utility": "cpp",
+			"xutility": "cpp"
+		}
+	}
+}
