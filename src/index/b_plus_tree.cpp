@@ -398,7 +398,14 @@ Page *BPLUSTREE_TYPE::FindLeafPage(const KeyType &key, bool leftMost) {
  */
 INDEX_TEMPLATE_ARGUMENTS
 void BPLUSTREE_TYPE::UpdateRootPageId(int insert_record) {
-  IndexRootsPage 
+   IndexRootsPage* root_page_set=static_cast<IndexRootsPage*>(buffer_pool_manager_->FetchPage(HEADER_PAGE_ID));
+   if(insert_record){
+     root_page_set->Insert(index_id_,root_page_id_);
+   }
+   else {
+     root_page_set->Update(index_id_,root_page_id_);
+   }
+   buffer_pool_manager_->UnpinPage(HEADER_PAGE_ID,true);
 }
 
 /**
